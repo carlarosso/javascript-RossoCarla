@@ -54,3 +54,5 @@ if (usuario == usuarioR && contraseña == passR) {
 } else {
     console.log("intente nuevamente");
 }
+
+/* FIN PROGRAMA DOS */
