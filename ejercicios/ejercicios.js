@@ -176,3 +176,45 @@ do {
 
 console.log(partidoA);
 console.log(partidoB);
+
+// funcion SUMA
+
+function sumar() {
+    let A = parseInt(prompt("ingrese un numero"));
+    let B = parseInt(prompt("ingrese un numero"));
+    let suma = A + B;
+    console.log(suma);
+}
+
+sumar();
+
+//FUNCION DESCUENTO PRECIOS
+
+let dia = prompt("inserte dia de la semana");
+let precio = parseInt(prompt("inserte precio producto"));
+
+function descuento(dia, precio) {
+    if (dia == "lunes" || dia == "Lunes") {
+        let precioMenos = precio * 0.5;
+        let precioTotal = precio - precioMenos;
+        return precioTotal;
+    } else if (dia == "miercoles" || dia == "Miercoles") {
+        let precioMenos = precio * 0.15;
+        let precioTotal = precio - precioMenos;
+        return precioTotal;
+    } else if (dia == "sabado" || dia == "Sabado") {
+        let precioMenos = precio * 0.20;
+        let precioTotal = precio - precioMenos;
+        return precioTotal;
+    }
+}
+
+function iva(functionReturn) {
+    let calculoIva = functionReturn * 0.21;
+    let precioIva = functionReturn + calculoIva;
+    return precioIva;
+}
+
+let functionReturn = descuento(dia, precio);
+let precioFinal = iva(functionReturn)
+console.log(precioFinal);
