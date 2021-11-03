@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="It's breakfast o'clock 🥐 Choose one of our combos and leave the rest to us. ¡We deliver to all CH!">
+    <meta name="keywords" content="breakfast, Switzerland, food, delivery, Swiss, gift, Zürich, Geneva, morning">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://kit.fontawesome.com/d085048c72.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;500&display=swap" rel="stylesheet">
+
+    <!-- Icon -->
+    <link rel="icon" href="https://i.postimg.cc/2ytZzptG/coffee.png" type="image/x-icon">
+
+    <!-- Title -->
+    <title>Send a Breakfast in Switzerland!</title>
+</head>
+
+<body>
+    <header>
+
+        <div class="head">
+
+            <!-- Navigation bar + logo -->
+
+            <a href="./index.html">
+                <div class="logo">
+                    <img src="https://i.postimg.cc/Pq0FxqG3/LOGO2-min.png" alt="Logo-vertical">
+                    <!-- Logo -->
+                </div>
+            </a>
+
+            <!-- NAVIGATION -->
+            <nav class="nav-horizontal">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                        <a href="paginas/about.html">About</a>
+                        <a href="paginas/Our-products.html">Our products</a>
+                        <a href="paginas/Contact.html">Contact</a>
+                        <a href="paginas/Cart.html">Cart</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- BURGER MENU -->
+
+            <div class="burger-menu">
+                <button type="button" id="nav-btn" data-bs-toggle="dropdown">
+                    <input id="abrir-cerrar" name="abrir-cerrar" type="checkbox" value="" />
+                    <label for="abrir-cerrar" class="toggle-button">
+                        <span class="cerrar" title="Cerrar">Cerrar</span>
+                        <span class="abrir" title="Abrir">Abrir</span>
+                    </label>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="paginas/about.html">About</a></li>
+                    <li><a href="paginas/Our-products.html">Our products</a></li>
+                    <li><a href="paginas/Contact.html">Contact</a></li>
+                    <li><a href="paginas/Cart.html">Cart</a></li>
+                </ul>
+            </div>
+
+            <!-- END BURGER MENU -->
+
+
+        </div>
+
+
+        <!-- End Navigation bar + logo -->
+
+    </header>
+
+    <!-- BODY -->
+
+    <main class="main">
+
+        <div>
+            <div class="titles" id="responsive-title">
+                <h1 class="titulo">Send a Breakfast</h1>
+                <a class="boton-index btn" onclick="alertOne()">See our products</a>
+            </div>
+
+
+            <!-- GRID -->
+
+            <div class="hide grid">
+
+                <div class="Video-index">
+                    <iframe src="https://www.youtube.com/embed/C2gEv_9-p6I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <div class="dingdong">
+                    <h3 class="subtitulo-1">Ding Dong... ¡Your breakfast is here!</h3>
+                    <p class="about-text">If you are looking for an innovative yet heartful gift, ¡you have come to the right place! Make someone's morning perfect, surprise your loved ones with one of our breakfast gift boxes delivered directly to their door. We use fresh,
+                        high-quality products to ensure the best of experiences. After all, nothing beats waking up to a hot coffee and a delicious breakfast (¡without even moving a finger!) </p>
+                </div>
+
+                <!-- COLUMN RIGHT -->
+
+                <div class="columna-index">
+
+                    <!-- SEARCH ENGINE  -->
+                    <div class="mysearch-engine">
+                        <form id="form-search">
+                            <input type="search" role="search" class="mysearch" placeholder="Search">
+                            <button class="mysearch-button">Search</button>
+                        </form>
+                    </div>
+
+                    <!-- MONTH SPECIAL -->
+
+                    <article id="index-special">
+                        <span id="sub-special">This month's Special:</span>
+                        <h3 id="title-special">El Argento</h3>
+
+                        <img src="https://i.postimg.cc/d1kPHXFX/el-argento1.jpg" alt="Mate con medialunas" class="img-special">
+
+                        <p>Enjoy a traditional Argentinian breakfast wherever you are with this special box inspired by our roots.
+                        </p>
+
+                        <div>
+                            <a class="special-button btn" href="paginas/Our-products.html#argento">Shop now</a>
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <!-- END MONTH SPECIAL -->
+
+
+                <!-- SECTION WHY CHOOSE US -->
+                <div class="why-choose">
+                    <h2 class="subtitulo-1">Why choose us:</h2>
+
+                    <div id="reason-container">
+                        <ul class="reason">
+                            <div class="reason-hover">
+                                <i class="fas fa-truck"></i>
+                                <li class="reason-title">#StayHome</li>
+                            </div>
+                            <li class="p-reason">Choose one of our breakfast boxes and we deliver it to all Switzerland for you.</li>
+                        </ul>
+                        <ul class="reason">
+                            <div class="reason-hover">
+                                <i class="fas fa-lock"></i>
+                                <li class="reason-title">Secure Payment</li>
+                            </div>
+                            <li class="p-reason">Our payment method is easy to use, direct and confidential. Your security is our priority. </li>
+                        </ul>
+                        <ul class="reason">
+                            <div class="reason-hover">
+                                <i class="fas fa-check-circle"></i>
+                                <li class="reason-title">High Quality</li>
+                            </div>
+                            <li class="p-reason">We use fresh products, providing our costumers with the highest quality.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- END SECTION WHY CHOOSE US -->
+
+            </div>
+
+            <!-- END GRID -->
+
+        </div>
+        <!-- img  of delivery -->
+
+        <div class="banner-indexdown hide">
+            <img src="https://i.postimg.cc/B6D71G4q/4225416.jpg" alt="delivery" />
+        </div>
+
+        <!-- end img  of delivery -->
+
+
+
+
+
+        <!-- RESPONSIVE FOR MOBILE -->
+
+
+        <div id="responsive-index">
+
+            <div class="dingdong">
+                <h3 class="subtitulo-1">Ding Dong... ¡Your breakfast is here!</h3>
+                <p class="about-text">If you are looking for an innovative yet heartful gift, ¡you have come to the right place! Make someone's morning perfect, surprise your loved ones with one of our breakfast gift boxes delivered directly to their door. We use fresh, high-quality
+                    products to ensure the best of experiences. After all, nothing beats waking up to a hot coffee and a delicious breakfast (¡without even moving a finger!) </p>
+            </div>
+
+            <div class="Video-index">
+                <iframe src="https://www.youtube.com/embed/C2gEv_9-p6I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <!-- SECTION WHY CHOOSE US -->
+
+            <div id="reason-container2">
+
+                <div class="why-choose">
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <h2 class="subtitulo-1">Why choose us:</h2>
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <ul class="reason">
+                                    <div class="reason-hover">
+                                        <i class="fas fa-truck"></i>
+                                        <li class="reason-title">#StayHome</li>
+                                    </div>
+                                    <li class="p-reason">Choose one of our breakfast boxes and we deliver it to all Switzerland for you.
+                                    </li>
+                                </ul>
+                            </div>
+
+
+
+                            <div class="carousel-item">
+                                <ul class="reason">
+                                    <div class="reason-hover">
+                                        <i class="fas fa-lock"></i>
+                                        <li class="reason-title">Secure Payment</li>
+                                    </div>
+                                    <li class="p-reason">Our payment method is easy to use, direct and confidential. Your security is our priority. </li>
+                                </ul>
+                            </div>
+
+                            <div class="carousel-item">
+                                <ul class="reason">
+                                    <div class="reason-hover">
+                                        <i class="fas fa-check-circle"></i>
+                                        <li class="reason-title">High Quality</li>
+                                    </div>
+                                    <li class="p-reason">We use fresh products, providing our costumers with the highest quality.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- END SECTION WHY CHOOSE US -->
+
+
+
+            <!-- MONTH SPECIAL -->
+
+            <div class="columna-index">
+
+
+                <!-- SEARCH ENGINE  -->
+                <div class="mysearch-engine">
+                    <form id="form-search2">
+                        <input type="search" role="search" class="mysearch" placeholder="Search">
+                        <button class="mysearch-button">Search</button>
+                    </form>
+                </div>
+
+
+
+                <article id="index-special2">
+                    <span>This month's Special:</span>
+                    <h3>El Argento</h3>
+
+                    <div class="responsive-column">
+                        <img src="https://i.postimg.cc/d1kPHXFX/el-argento1.jpg" alt="Mate con medialunas" class="img-special">
+
+                        <div class="responsive-pa">
+                            <p>Enjoy a traditional Argentinian breakfast wherever you are with this special box inspired by our roots.
+                            </p>
+
+                            <div>
+                                <a class="special-button btn" href="paginas/Our-products.html#argento">Shop now</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </article>
+            </div>
+        </div>
+
+        <!-- END MONTH SPECIAL -->
+
+        <!-- img  of delivery -->
+
+        <div class="banner-indexdown banner-hide">
+            <img src="https://i.postimg.cc/B6D71G4q/4225416.jpg" alt="delivery" />
+        </div>
+
+        <!-- end img  of delivery -->
+
+        <!-- END RESPONSIVE MOBILE -->
+
+    </main>
+
+    <footer>
+        <div id="foot">
+            <ul>
+                <li><a href="index.html">LEGAL</a></li>
+                <li><a href="paginas/Contact.html">CONTACT</a></li>
+                <li><a href="paginas/sitemap.html">SITE MAP</a></li>
+            </ul>
+
+
+
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <script src="js/js.js"></script>
+
+</body>
+
+</html>
