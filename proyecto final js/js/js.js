@@ -16,6 +16,14 @@ function alertOne(alertIndex) {
 
 /* // DESASFÍO OBJETOS
 
+Hay un error en cuando queres ejecutar ese metodo, El problema esta en que no creaste ningun objeto en base a tu funcion constructora. Los datos por prompt estan bien pedidos, despues de pedir esos datos, deberias crear tu objeto algo asi por ejemplo: 
+
+let persona1 = new usuarios(user,edad,lugar)  // Creo una variable que va a ser el objeto y en los parametros que le asignaste a la funcion usuarios, pasas esas 3 variables donde guardaste los datos de los prompts
+
+
+persona1.persona(); // Y aca llamo a ese objeto que acabo de crear, y el metodo que creaste antes, para que imprima por consola los datos :) 
+
+
 let user = prompt("inserte usuario");
 let edad = parseInt(prompt("inserte su edad"));
 let lugar = prompt("inserte su lugar de residencia");
@@ -35,9 +43,16 @@ function usuarios(user, edad, lugar) {
 let usuarioNuevo = new usuarios(user, edad, lugar);
 usuarioNuevo.persona(); */
 
+
+
+
+
+
+
+
 // DESAFÍO ARRAYS
 
-let productos = [{
+/* let productos = [{
         id: '0',
         nombreProducto: "Good day sunshine",
         stock: 20,
@@ -106,6 +121,25 @@ for (producto of productos) {​
     }
 
 }​
-console.log(productos)​​
+console.log(productos)​​ */
 
-​​
+
+
+
+
+
+​​ // DESAFIO ORDENAR UN ARRAY DE OBJETOS
+
+let size = 5;
+let edadesUsuarios = [];
+
+for (let i = 0; i < size; i++) {
+    let año = parseInt(prompt('Ingrese el año de nacimiento'));
+    let edad = 2021 - año;
+    edadesUsuarios.push(edad);
+}
+
+let numberSorter = (a, b) => a - b;
+edadesUsuarios.sort(numberSorter);
+
+console.log(edadesUsuarios)
