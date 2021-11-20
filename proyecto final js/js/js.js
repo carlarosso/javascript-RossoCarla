@@ -1,20 +1,3 @@
- // DESAFIO ORDENAR UN ARRAY DE OBJETOS
-
- let size = 5;
- let edadesUsuarios = [];
-
- for (let i = 0; i < size; i++) {
-     let año = parseInt(prompt('Ingrese el año de nacimiento'));
-     let edad = 2021 - año;
-     edadesUsuarios.push(edad);
- }
-
- let numberSorter = (a, b) => a - b;
- edadesUsuarios.sort(numberSorter);
-
- console.log(edadesUsuarios)
-
-
  // PRIMERA ENTREGA PROYECTO FINAL
 
 
@@ -81,14 +64,15 @@
 8. Everyday I'm waffling
 `)
 
- let productoComprado = '';
- let cantidad = '';
- for (let producto of productos) {​
-     if (compra == producto.id) {​
-         cantidad = producto.stock - 1;
-         productoComprado = producto.nombreProducto
+ let productoComprado;
+ let cantidad;​
+ for (let prod of productos) {
+     if (compra == prod.id) {
+         cantidad = prod.stock - 1;
+         productoComprado = prod.nombreProducto
+         console.log(prod)
      }
- }​
+ }
 
  let usuario = prompt('inserte su nombre de Usuario');
 
