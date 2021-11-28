@@ -1,79 +1,35 @@
- // PRIMERA ENTREGA PROYECTO FINAL
+// DESAFÍO INTERACTUAR CON HTML
+
+// CREO UN NUEVO ELEMENTO PÁRRAFO
+let parrafo = document.createElement("p");
 
 
- let productos = [{
-         id: '0',
-         nombreProducto: "Good day sunshine",
-         stock: 20,
-     }, {
-         id: '1',
-         nombreProducto: "Willy Wonka",
-         stock: 10,
-     },
-     {
-         id: '2',
-         nombreProducto: "El Argento",
-         stock: 5,
-     },
-     {
-         id: '3',
-         nombreProducto: "Bedfast",
-         stock: 24,
-     },
-     {
-         id: '4',
-         nombreProducto: "Swiss dreams are made of this",
-         stock: 32,
-     },
-     {
-         id: '5',
-         nombreProducto: "Guilt-free",
-         stock: 68,
-     },
-     {
-         id: '6',
-         nombreProducto: "El Argento",
-         stock: 44,
-     },
-     {
-         id: '7',
-         nombreProducto: "Marie Antoinette",
-         stock: 21,
-     },
-     {
-         id: '8',
-         nombreProducto: "Le macaron",
-         stock: 15,
-     },
-     {
-         id: '9',
-         nombreProducto: "Everyday I'm waffling",
-         stock: 8,
-     }
- ]
+// INCLUYO CONTENIDO DENTRO DEL ELEMENTO PARRAFO
+parrafo.innerHTML = "In this section, you can see all our products and choose one of them. Click the Add button and it will automatically be added to your cart!"
 
- let compra = prompt(`Inserte el número del producto a comprar: 
-0. Good day sunshine
-1. Willy Wonka
-2. El Argento
-3. Bedfast
-4. Swiss dreams are made of this
-5. Guilt-free
-6. Marie Antoinette
-7. Le macaron
-8. Everyday I'm waffling
-`)
+// CREO EL ESPACIO CONTENEDOR DEL ELEMENTO PARRAFO
+let container = document.getElementById("container");
 
- let productoComprado;
- let cantidad;​
- for (let prod of productos) {
-     if (compra == prod.id) {
-         cantidad = prod.stock - 1;
-         productoComprado = prod.nombreProducto
-         console.log(prod)
-     }
- }
+// AGREGO MARGEN AL DIV CONTAINER
+container.style.margin = "50px";
 
- let usuario = prompt('inserte su nombre de Usuario');
+// LINKEO EL ELEMENTO PARRAFO CON EL CONTENEDOR PARA QUE SE MUESTRE EN LA INTERFAZ
+container.appendChild(parrafo)
 
- console.log(`Hola ${usuario}! Ordenaste el producto ${compra}: ${productoComprado}. Nos quedan en stock ${cantidad}`);
+
+// FUNCION PARA AGREGAR ELEMENTOS A LA LISTA
+
+function agregarElemento() {
+
+    let lista = document.getElementById("listado");
+    let prod = document.getElementById("nombreCombo");
+
+    let nuevoElemento = document.createElement("li");
+
+    nuevoElemento.style.fontSize = "15px";
+
+    nuevoElemento.innerHTML = `${nombreCombo.value}`;
+
+    lista.appendChild(nuevoElemento);
+
+}
