@@ -1,35 +1,37 @@
-// DESAFÍO INTERACTUAR CON HTML
+// ............... DESAFIO INCORPORAR EVENTOS ................................
 
-// CREO UN NUEVO ELEMENTO PÁRRAFO
-let parrafo = document.createElement("p");
+//SELECCIONO TODOS LOS BOTONES "ADD TO CART"
 
+let CartBtn = document.querySelectorAll(".addCart");
 
-// INCLUYO CONTENIDO DENTRO DEL ELEMENTO PARRAFO
-parrafo.innerHTML = "In this section, you can see all our products and choose one of them. Click the Add button and it will automatically be added to your cart!"
+// CREO ARRAY CARRITO DE COMPRAS VACÍO
 
-// CREO EL ESPACIO CONTENEDOR DEL ELEMENTO PARRAFO
-let container = document.getElementById("container");
+let cart = [];
 
-// AGREGO MARGEN AL DIV CONTAINER
-container.style.margin = "50px";
+// CREO UNA VARIABLE A PARTIR DE BOTONES "ADD TO CART" Y LE AGREGO UN EVENTO
 
-// LINKEO EL ELEMENTO PARRAFO CON EL CONTENEDOR PARA QUE SE MUESTRE EN LA INTERFAZ
-container.appendChild(parrafo)
-
-
-// FUNCION PARA AGREGAR ELEMENTOS A LA LISTA
-
-function agregarElemento() {
-
-    let lista = document.getElementById("listado");
-    let prod = document.getElementById("nombreCombo");
-
-    let nuevoElemento = document.createElement("li");
-
-    nuevoElemento.style.fontSize = "15px";
-
-    nuevoElemento.innerHTML = `${nombreCombo.value}`;
-
-    lista.appendChild(nuevoElemento);
-
+for (let selection of CartBtn) {
+    selection.addEventListener("click", addCart)
 }
+
+// FUNCIÓN AGREGAR A CARRITO
+
+function addCart(e) {
+
+    // RECOLECCION DE DATOS DEL EVENTO
+    let product = e.target;
+
+    // CAPTURA DE DATOS DEL PADRE DEL BOTÓN CLICKEADO
+    let divProduct = product.parentNode;
+
+    // GUARDAR EL NOMBRE DEL PRODUCTO EN UNA VARIABLE
+    let prodTitle = divProduct.querySelector("h2").textContent;
+
+
+    // MENSAJE DE ALERTA SOBRE QUÉ PRODUCTO SE SELECCIONÓ
+    alert(`You have selected ${prodTitle}`)
+
+    // PUSH DEL TITULO DEL PRODUCTO AL CARRITO
+    cart.push(prodTitle);
+    console.log(cart)
+};
