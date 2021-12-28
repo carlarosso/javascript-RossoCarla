@@ -1,6 +1,3 @@
-
-// ............... DESAFIO GENERAR HTML ................................
-
 // CREO ARRAY DE OBJETOS - PRODUCTOS
 
 /* let productos = [{
@@ -70,24 +67,8 @@
         precio: "CHF 8", 
         imagen: 'https://i.postimg.cc/X7GTQrDD/waffle.jpg card-img-top img-product',
     },
-]
+] */
 
-// CREO VARIABLE CARRITO
-
-let carrito = document.getElementById("carrito");
-
-// ITERO SOBRE CADA OBJETO DEL ARRAY Y CREO UNA CARD
-
-for (var prod of productos) {
-    carrito.innerHTML += `<div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h2 class="card-title">${prod.nombreProducto}</h5>
-      <p class="card-text"> Get this product only for ${prod.precio}.</p>
-      <img src=${prod.imagen} class="card-img-top" alt="...">
-    </div>
-  </div>`
-}
- */
 
 // ............... DESAFIO JQUERY  ................................
 
@@ -111,12 +92,73 @@ $(".addCart").click(function(e){
     // CAPTURO EL TITULO DEL PRODUCTO CLICKEADO
 
     let title = clicked.parentNode.querySelector(".products-title").textContent;
- 
+
     // APPEND UN NUEVO LI CON EL NOMBRE DEL PRODUCTO CLICKEADO
 
     $(".cartList").append( `<li> ${title} </li> `)
 
 })
+
+
+// ----------------------------- DESAFIO ANIMACIONES -------------------------
+
+// CREO VARIABLES PARA OCULTAR Y MOSTRAR
+
+let hideDiv = $(".hideShow");
+let showBtn = $(".showContent")
+
+// OCULTAR CONTENIDO
+hideDiv.hide();
+
+
+
+// MOSTRAR CONTENIDO ON CLICK
+
+    showBtn.click(function(e){
+        $(this).next().toggle();
+        showBtn.text(function(i, text){
+            return text === "See less" ? "See more" : "See less";
+        })
+    
+    })
+
+  
+//  ---------------------------- DESAFIO AJAX
+
+// GUARDO URL EN VARIABLE
+
+let url = "https://jsonplaceholder.typicode.com/photos";
+
+$(".getImg").click(function(){
+    
+
+    $.get(url, function(data){
+        let info = data;
+        
+        for (let datos of info) {
+
+            let idIn = $("#idGet").val();
+            let idData = datos.id;
+
+            if (idIn === idData) {
+                $(".imgPlaceholder").append(`<div> 
+                            <h2> ${datos.id} </h2>
+                            <p> ${datos.title} </p>
+                           </div>`);
+
+        } else {
+            alert("try another number");
+        }
+
+        }
+    })
+})
+
+
+
+
+
+
 
 
 // CODIGO SIN USAR AÚN (ESTOY EXPLORANDO)

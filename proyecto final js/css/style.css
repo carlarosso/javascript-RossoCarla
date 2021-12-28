@@ -823,8 +823,8 @@ ul {
 }
 
 .products {
-    margin: 0 10px;
-    padding: 5px 30px
+    margin-top: 20px;
+    padding: 5px 30px;
 }
 
 
@@ -832,7 +832,6 @@ ul {
 
 .Product-3 {
     background-color: #d9cc81;
-    margin-top: -33px;
     border: none
 }
 
@@ -875,7 +874,7 @@ ul {
     color: #fff
 }
 
-.a-products {
+.a-products, .showContent {
     background-color: #003049;
     color: #fff;
     text-align: center;
@@ -890,6 +889,10 @@ ul {
 
 .back-btn {
     display: none
+}
+
+.hideShow {
+    height: 160px;
 }
 
 
