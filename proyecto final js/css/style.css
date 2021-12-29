@@ -922,7 +922,7 @@ ul {
     border: 2.5px solid #003049;
     border-radius: 15px;
     width: 600px;
-    margin: 5rem;
+    margin: 10rem auto;
     text-align: center;
     max-height: 400px
 }

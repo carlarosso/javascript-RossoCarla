@@ -1,6 +1,6 @@
 // CREO ARRAY DE OBJETOS - PRODUCTOS
 
-/* let productos = [{
+let productos = [{
         id: '0',
         nombreProducto: "Good day sunshine",
         precio: "CHF 20",
@@ -67,37 +67,65 @@
         precio: "CHF 8", 
         imagen: 'https://i.postimg.cc/X7GTQrDD/waffle.jpg card-img-top img-product',
     },
-] */
+]
 
 
-// ............... DESAFIO JQUERY  ................................
+// ............... AGREGAR ELEMENTOS AL CARRITO CON JQUERY  ................................
 
 
 // TRAIGO DIV CART DE CART.HTML
 
-let cart = $(".cart-section1");
+let cart = $(".cartList");
 
 // CREO VARIABLE PARA BOTONES CON SELECTOR JQUERY
 
 let btns = $(".addCart");
 
+
 // FUNCION PARA AGREGAR AL CARRITO
 
-$(".addCart").click(function(e){
+btns.click(function(e){
 
     // CAPTURO EL EVENTO CLICK
 
-    let clicked = e.target; 
+    let btnClicked = e.target; 
+
 
     // CAPTURO EL TITULO DEL PRODUCTO CLICKEADO
 
-    let title = clicked.parentNode.querySelector(".products-title").textContent;
+    let title = $(this).parent().parent(".products-title").textContent;
+
 
     // APPEND UN NUEVO LI CON EL NOMBRE DEL PRODUCTO CLICKEADO
 
     $(".cartList").append( `<li> ${title} </li> `)
+    
+
+    // GUARDAR PRODUCTOS SELECCIONADOS EN STORAGE
+
+    // CREO VARIABLE CART CON ARRAY VACIO Y .PUSH() EL ELEMENTO CLICKEADO
+
+    let cart = [];
+
+    cart.push(title)
+
+
+    // GUARDAR LOS PRODUCTOS SELECCIONADOS EN LOCALSTORAGE
+
+    localStorage.setItem("cart", cart);
+
+    console.log(localStorage)
 
 })
+
+
+
+
+
+
+
+
+
 
 
 // ----------------------------- DESAFIO ANIMACIONES -------------------------
@@ -121,6 +149,12 @@ hideDiv.hide();
         })
     
     })
+
+
+
+
+
+
 
   
 //  ---------------------------- DESAFIO AJAX
@@ -163,6 +197,18 @@ $(".getImg").click(function(){
 
 // CODIGO SIN USAR AÚN (ESTOY EXPLORANDO)
 
+/* 
+// OCULTO CONTENIDO DEL CARRITO CUANDO SE AGREGUE ELEMENTOS
+
+    $('.carrito').each(function() { 
+        if($(this).hasClass('active')) { 
+            $(this).removeClass('active');
+        } else { 
+            $(this).addClass('active');
+        }
+})
+ */
+
 
 /* let botones = $(".addCart");
 
@@ -187,5 +233,4 @@ console.log(shoppingList)
    $(this).css('opacity', 1);
 } else {
    $(this).css('opacity', 0);
-} 
- */
+} */
