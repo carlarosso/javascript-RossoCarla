@@ -930,25 +930,14 @@ ul {
 }
 
 
-/*! CART PAGE */
-
-#title-cart {
-    background-image: url("https://i.postimg.cc/9FPzYBZR/banner-cart-full.jpg");
-    height: 55vh;
-    margin-bottom: 5rem
-}
-
-#title-cart h1 {
-    margin-left: 5rem
-}
-
-.container-cart {
-    display: flex;
-    justify-content: space-around
-}
+/*! CART */
 
 
 /*! YOUR CART IS EMPTY SECTION */
+
+.container-cart {
+    margin-top: 200px;
+}
 
 .cart-section1 {
     display: flex;
@@ -958,7 +947,7 @@ ul {
     width: 600px;
     margin: 10rem auto;
     text-align: center;
-    max-height: 400px
+    height: 100%;
 }
 
 .content-cart {
@@ -972,7 +961,7 @@ ul {
     font-size: 2.5rem;
     display: flex;
     align-items: center;
-    margin-top: 3rem;
+    margin-top: 2rem;
     justify-content: center;
     color: #003049;
     background-color: #d9cc81;
@@ -1003,52 +992,62 @@ ul {
     background-color: #fcbf49
 }
 
-
-/*! SUGGESTION SECTION */
-
-.cart-section2 {
-    background-color: #fcbf49;
-    padding: 2rem;
-    margin-right: 3rem;
-    height: auto;
-    width: 450px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between
+.cartTitle {
+    font-size: 3rem;
+    margin: 1rem auto;
 }
 
-.cart-section2 img {
-    border: 3px solid #fff
+.fullCart {
+    display: grid;
+    grid-template-columns: 1fr 0fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr;
+    gap: 0px 0px;
+    grid-template-areas: "prodNames prodPrices" "sum-prices sum-prices" "checkoutBtn checkoutBtn";
 }
 
-.cart-section2 h2 {
-    color: #fff;
-    text-transform: uppercase;
+.fontCart {
+    font-size: 2rem;
+}
+
+.cartList {
+    text-align: left;
+    margin-left: 4rem;
+}
+
+.cartAlign {
     display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.prodNames {
+    grid-area: prodNames;
+    display: flex;
+    width: 60%;
+}
+
+.prodPrices {
+    grid-area: prodPrices;
+    display: flex;
+    width: 40%;
     justify-content: center;
-    font-size: 2.5rem;
-    padding: 20px;
-    font-weight: bold;
-    border-top: 5px solid #fff
+    text-align: left;
 }
 
-.item-title {
-    font-size: 2.5rem;
-    padding: .5rem;
-    text-align: center;
-    color: #003049;
-    background-color: #fff;
-    margin: 1rem 0
+.checkoutBtn {
+    grid-area: checkoutBtn;
 }
 
-.carousel-item p {
-    text-align: center;
-    margin: 1rem
+#checkout {
+    margin: 1rem auto;
 }
 
-.carousel-item img {
-    height: 250px;
-    width: 100%
+#sum-prices {
+    grid-area: sum-prices;
+    display: flex;
+    align-items: center;
+    left: 365px;
+    position: relative;
 }
 
 

@@ -45,7 +45,6 @@
                     <li><a href="about.html"> About </a></li>
                     <li><a href="Our-products.html"> Our Products </a></li>
                     <li><a href="Contact.html"> Contact </a></li>
-                    <li><a href="Cart.html"> Cart </a></li>
                 </ul>
             </nav>
 
@@ -65,7 +64,6 @@
                     <li><a href="about.html">About</a></li>
                     <li><a href="Our-products.html">Our products</a></li>
                     <li><a href="Contact.html">Contact</a></li>
-                    <li><a href="#">Cart</a></li>
                 </ul>
             </div>
 
@@ -110,7 +108,7 @@
                         <div class="card-face card-back">
                             <div class="back-content box">
                                 <p class="products">Our most traditional combo. Toasts, croissants, butter and jam. </p>
-                                <p class="productPrice"></p>
+                                <p class="productPrice"> CHF 20</p>
                                 <button class="a-products btn addCart">Add to
                             cart</button>
                             </div>
@@ -133,7 +131,7 @@
                             <div class="back-content box">
                                 <p class="products">¿Sweet tooth? Then this chocolate-full combo is your perfect match. ¡Swipe right!
                                 </p>
-                                <p class="productPrice"></p>
+                                <p class="productPrice">CHF 25</p>
                                 <button class="a-products btn addCart">Add to
                                 cart</button>
                             </div>
@@ -156,7 +154,7 @@
                         <div class="card-face card-back back-special">
                             <div class="back-content box">
                                 <p class="products">Traditional argentinian breakfast. Enjoy our homemade medialunas and the best "bizcochitos".</p>
-                                <p class="productPrice"></p>
+                                <p class="productPrice">CHF 28</p>
                                 <button class="a-products btn addCart">Add to
                             cart</button>
                             </div>
@@ -179,7 +177,7 @@
                             <div class="back-content box">
                                 <p class="products">Enjoy this combo without leaving the comfort of your bed. No plates needed
                                 </p>
-                                <p class="productPrice"></p>
+                                <p class="productPrice">CHF 24</p>
                                 <button class="a-products btn addCart">Add to
                             cart</button>
                             </div>
@@ -202,7 +200,7 @@
                             <div class="back-content box">
                                 <p class="products">Cheese. Swiss cheese. ¿What else can we say?
                                 </p>
-                                <p class="productPrice"></p>
+                                <p class="productPrice">CHF 32</p>
                                 <button class="a-products btn addCart">Add to
                             cart</button>
                             </div>
@@ -225,7 +223,7 @@
                             <div class="back-content box">
                                 <p class="products">Fruits, oatmeal, yoghurt. All fitness approved.
                                 </p>
-                                <p class="productPrice"></p>
+                                <p class="productPrice">CHF 28</p>
                                 <button class="a-products btn addCart">Add to
                             cart</button>
                             </div>
@@ -248,7 +246,7 @@
                             <div class="back-content box">
                                 <p class="products">You choose the cakes you want, we make them for you ¡Let us eat cake!
                                 </p>
-                                <p class="productPrice"></p>
+                                <p class="productPrice">CHF 21</p>
                                 <button class="a-products btn addCart">Add to
                             cart</button>
                             </div>
@@ -271,7 +269,7 @@
                             <div class="back-content box">
                                 <p class="products">Dig into our tasty macarons. Different flavors, same amazigness. Mon Dieux!
                                 </p>
-                                <p class="productPrice"></p>
+                                <p class="productPrice">CHF 15</p>
                                 <button class="a-products btn addCart">Add to
                             cart</button>
                             </div>
@@ -294,7 +292,7 @@
                             <div class="back-content box">
                                 <p class="products">Select the toppings you want for this amazing, warm and fluffy waffle combo.
                                 </p>
-                                <p class="productPrice"></p>
+                                <p class="productPrice">CHF 19</p>
                                 <button class="a-products btn addCart">Add to
                             cart</button>
                             </div>
@@ -306,9 +304,45 @@
             </div>
         </div>
 
-        <!-- BACK TO TOP BUTTON -->
-        <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
-        <!-- END BACK TO TOP BUTTON -->
+
+
+        <div class="container-cart">
+
+            <!-- CART WHEN EMPTY -->
+
+            <div class="cart-section1">
+                <h2 class="cartTitle">Cart</h2>
+                <div class="icon-title">
+                    <i class="fas fa-shopping-cart" class="iconos"></i>
+                    <h2>Your cart is empty <span class="emoji">😪</span></h2>
+                </div>
+
+
+                <!-- CART WITH LISTED ELEMENTS -->
+                <div class="fullCart">
+                    <div class="cartAlign">
+                        <div class="prodNames">
+                            <ul class="cartList fontCart">
+
+                            </ul>
+                        </div>
+                        <div class="prodPrices">
+                            <ul class="prices fontCart">
+
+                            </ul>
+                        </div>
+
+
+                    </div>
+                    <p id="sum-prices">TOTAL: </p>
+
+
+                </div>
+            </div>
+        </div>
+
+
+
 
 
 
